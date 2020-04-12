@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Async_Inn_Frontend.Models.Hotel>
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <ul>
+            @foreach (var hotel in Model)
+            {
+                <li>
+                    <h2>@hotel.Name: @hotel.City, @hotel.State</h2>
+                </li>
+            }
+        </ul>
+    </body>
+</html>
