@@ -23,8 +23,8 @@ namespace Async_Inn_Frontend.Models
         [JsonPropertyName("state")]
         public string State { get; set; }
 
-        [JsonPropertyName("phoneNumber")]
-        public string PhoneNumber { get; set; }
+        [JsonPropertyName("phone")]
+        public string Phone { get; set; }
 
         [JsonPropertyName("rooms")]
         public List<HotelRoom> HotelRooms {get; set;}

@@ -25,7 +25,12 @@ namespace Async_Inn_Frontend.Models.Services
 
         public async Task<Hotel> GetHotelById(int hotelId)
         {
-            throw new NotImplementedException();
+            string route = $"hotels/{hotelId}";
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            var streamTask = await client.GetStreamAsync($"{baseURL}/{route}");
+            var result = await JsonSerializer.DeserializeAsync<Hotel>(streamTask);
+            return result;
         }
     }
 }

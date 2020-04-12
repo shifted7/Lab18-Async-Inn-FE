@@ -6,12 +6,16 @@
 
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>All Hotels:</h1>
         <ul>
             @foreach (var hotel in Model)
             {
                 <li>
                     <h2>@hotel.Name: @hotel.City, @hotel.State</h2>
+                    <h3>@hotel.Phone</h3>
+                    <form method="post">
+                        <button asp-action="@hotel.ID">See details</button>
+                    </form>
                 </li>
             }
         </ul>

@@ -15,9 +15,17 @@ namespace Async_Inn_Frontend.Controllers
             _hotel = hotel;
         }
 
+        [Route("/hotels", Name="hotels")]
         public async Task<IActionResult> Index()
         {
             var result = await _hotel.GetAllHotels();
+            return View(result);
+        }
+
+        [Route("/hotels/{id}")]
+        public async Task<IActionResult> HotelDetails(int id)
+        {
+            var result = await _hotel.GetHotelById(id);
             return View(result);
         }
     }
