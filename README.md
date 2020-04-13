@@ -39,13 +39,13 @@ Microsoft Visual Studio Community 2019 (Version 16.4.5)
 ***[Provide some images of your app with brief description as title]***
 
 >### Home Page
->![Home Page](assets/Capture01.png)
+>![Home Page](assets/Capture01.PNG)
 
 >### Hotels List
->![Hotel List](assets/Capture02.png)
+>![Hotel List](assets/Capture02.PNG)
 
 >### Details View
->![Hotel Details](assets/Capture03.png)
+>![Hotel Details](assets/Capture03.PNG)
 
 ---
 
