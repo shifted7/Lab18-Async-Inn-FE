@@ -13,10 +13,5 @@ namespace Async_Inn_Frontend.Models
         
         [JsonPropertyName("name")]
         public string Name { get; set; }
-
-        //public IEnumerator<AmenitiesDTO> GetEnumerator()
-        //{
-        //    return null;
-        //}
     }
 }

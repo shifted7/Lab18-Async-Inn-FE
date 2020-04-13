@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/reset.css" type="text/css" />
+    <link rel="stylesheet" href="~/Stylesheet.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Async Inn - Hotel Management System</h1>
+        <nav>
+            <ul>
+                <li> - </li>
+                <li>
+                    <form method="post">
+                        <button asp-route="index">HOME</button>
+                    </form>
+                </li>
+                <li> - </li>
+                <li>
+                    <form method="post">
+                        <button asp-route="hotels">HOTELS</button>
+                    </form>
+                </li>
+                <li> - </li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <p>Copyright Async Innkeepers 2020</p>
+    </footer>
+</body>
+</html>

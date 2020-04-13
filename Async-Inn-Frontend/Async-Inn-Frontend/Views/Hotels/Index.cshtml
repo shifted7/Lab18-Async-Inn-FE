@@ -1,23 +1,26 @@
 ﻿@model IEnumerable<Async_Inn_Frontend.Models.Hotel>
+@{
+    Layout = "_MasterLayout";
+}
 
 <!DOCTYPE html>
 <html>
-    <head>
-
-    </head>
-    <body>
-        <h1>All Hotels:</h1>
-        <ul>
-            @foreach (var hotel in Model)
+<head>
+    <title>Async Inn - Hotels</title>
+</head>
+<body>
+    <h1>All Hotels:</h1>
+    <ul>
+        @foreach (var hotel in Model)
             {
-                <li>
-                    <h2>@hotel.Name: @hotel.City, @hotel.State</h2>
-                    <h3>@hotel.Phone</h3>
-                    <form method="post">
-                        <button asp-action="@hotel.ID">See details</button>
-                    </form>
-                </li>
+        <li>
+            <h2>@hotel.Name: @hotel.City, @hotel.State</h2>
+            <h3>@hotel.Phone</h3>
+            <form method="post">
+                <button asp-action="@hotel.ID">See details</button>
+            </form>
+        </li>
             }
-        </ul>
-    </body>
+    </ul>
+</body>
 </html>

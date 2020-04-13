@@ -12,7 +12,12 @@ namespace Async_Inn_Frontend.Models.Services
     public class HotelService : IHotelManager
     {
         private static readonly HttpClient client = new HttpClient();
-        public string baseURL = @"https://localhost:44325/api";
+        public string baseURL = @"https://asyncinn-andrewharry-api.azurewebsites.net/api"; // URL of backend
+        
+        /// <summary>
+        /// Gets a list of all our hotel objects from the backend
+        /// </summary>
+        /// <returns>A task to asynchronously provide a list of hotels</returns>
         public async Task<List<Hotel>> GetAllHotels()
         {
             string route = "hotels";
